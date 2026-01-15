@@ -3,9 +3,10 @@ import { motion } from "framer-motion";
 const skills = [
   "JavaScript / TypeScript",
   "React / Next.js",
-  "Java / Spring",
+  "PHP / LARAVEL",
   "Node.js / Express e Fastify",
   "PostgreSQL / MongoDB",
+  "Java / Spring",
   "Docker",
   "Git",
 ];
@@ -24,7 +25,7 @@ const education = [
   {
     period: "2018 - 2022",
     title: "Instituto de Telecomunicações (ITEL)",
-    description: "Ensino Médio",
+    description: "Informática - Ensino Médio",
   },
 ];
 

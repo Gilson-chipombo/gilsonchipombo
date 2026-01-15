@@ -53,17 +53,17 @@ const HeroSection = () => {
           transition={{ delay: 0.3 }}
           className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4"
         >
-          <span className="text-gradient">Gilson Bravo F. Chipombo</span>
+          <span className="text-gradient">Gilson  Chipombo</span>
         </motion.h1>
 
-        <motion.h2
+        <motion.h5
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
           className="text-2xl md:text-4xl lg:text-5xl font-bold text-muted-foreground mb-6"
         >
-          Desenvolvedor Full Stack
-        </motion.h2>
+          Dev. Full Stack com foco em Backend e Testes
+        </motion.h5>
 
         <motion.p
           initial={{ opacity: 0 }}
@@ -72,7 +72,7 @@ const HeroSection = () => {
           className="text-muted-foreground max-w-xl mx-auto mb-8 text-base md:text-lg"
         >
           Transformo ideias em aplicações web modernas e escaláveis.
-          Especializado em React, Node.js e tecnologias cloud.
+          Focado em tecnologias como React, Laravel e Node.js.
         </motion.p>
 
         {/* Social Links */}
