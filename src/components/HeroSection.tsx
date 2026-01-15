@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
+import profileImage from "@/assets/profile.jpg";
 
 const HeroSection = () => {
   const scrollToProjects = () => {
@@ -20,6 +21,23 @@ const HeroSection = () => {
         transition={{ duration: 0.8 }}
         className="text-center z-10"
       >
+        {/* Profile Image */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.1, duration: 0.5 }}
+          className="mb-8"
+        >
+          <div className="relative inline-block">
+            <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl" />
+            <img
+              src={profileImage}
+              alt="Foto de perfil"
+              className="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-primary/30 glow-primary"
+            />
+          </div>
+        </motion.div>
+
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

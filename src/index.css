@@ -6,41 +6,41 @@
 
 @layer base {
   :root {
-    --background: 220 20% 6%;
+    --background: 222 47% 6%;
     --foreground: 210 20% 95%;
 
-    --card: 220 18% 10%;
+    --card: 222 45% 10%;
     --card-foreground: 210 20% 95%;
 
-    --popover: 220 18% 10%;
+    --popover: 222 45% 10%;
     --popover-foreground: 210 20% 95%;
 
-    --primary: 168 80% 50%;
-    --primary-foreground: 220 20% 6%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 6%;
 
-    --secondary: 220 15% 15%;
+    --secondary: 222 40% 15%;
     --secondary-foreground: 210 20% 95%;
 
-    --muted: 220 15% 18%;
-    --muted-foreground: 215 15% 55%;
+    --muted: 222 40% 18%;
+    --muted-foreground: 215 20% 55%;
 
-    --accent: 168 80% 50%;
-    --accent-foreground: 220 20% 6%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 222 47% 6%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 15% 20%;
-    --input: 220 15% 20%;
-    --ring: 168 80% 50%;
+    --border: 222 40% 20%;
+    --input: 222 40% 20%;
+    --ring: 217 91% 60%;
 
     --radius: 0.75rem;
 
     /* Custom tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(168 80% 50%), hsl(190 80% 45%));
-    --gradient-card: linear-gradient(145deg, hsl(220 18% 12%), hsl(220 18% 8%));
-    --glow-primary: 0 0 30px hsl(168 80% 50% / 0.3);
-    --glow-strong: 0 0 50px hsl(168 80% 50% / 0.4);
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(199 89% 48%));
+    --gradient-card: linear-gradient(145deg, hsl(222 45% 12%), hsl(222 45% 8%));
+    --glow-primary: 0 0 30px hsl(217 91% 60% / 0.3);
+    --glow-strong: 0 0 50px hsl(217 91% 60% / 0.4);
 
     --font-mono: 'JetBrains Mono', monospace;
     --font-sans: 'Inter', sans-serif;
