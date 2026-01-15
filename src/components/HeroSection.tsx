@@ -53,7 +53,7 @@ const HeroSection = () => {
           transition={{ delay: 0.3 }}
           className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4"
         >
-          <span className="text-gradient">Seu Nome</span>
+          <span className="text-gradient">Gilson Bravo F. Chipombo</span>
         </motion.h1>
 
         <motion.h2
@@ -83,7 +83,7 @@ const HeroSection = () => {
           className="flex items-center justify-center gap-6 mb-12"
         >
           <a
-            href="https://github.com/seuusuario"
+            href="https://github.com/Gilson-chipombo"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors duration-300"
@@ -91,7 +91,7 @@ const HeroSection = () => {
             <Github className="w-6 h-6" />
           </a>
           <a
-            href="https://linkedin.com/in/seuusuario"
+            href="https://www.linkedin.com/in/gilson-bravo-fernando-chipombo-aa0ba4209/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors duration-300"
@@ -99,7 +99,7 @@ const HeroSection = () => {
             <Linkedin className="w-6 h-6" />
           </a>
           <a
-            href="mailto:seuemail@email.com"
+            href="fernandochipombo@email.com"
             className="text-muted-foreground hover:text-primary transition-colors duration-300"
           >
             <Mail className="w-6 h-6" />

@@ -3,10 +3,11 @@ import { motion } from "framer-motion";
 const skills = [
   "JavaScript / TypeScript",
   "React / Next.js",
-  "Node.js / Express",
+  "Java / Spring",
+  "Node.js / Express e Fastify",
   "PostgreSQL / MongoDB",
-  "Docker / AWS",
-  "Git / CI/CD",
+  "Docker",
+  "Git",
 ];
 
 const education = [
@@ -16,13 +17,13 @@ const education = [
     description: "Formação intensiva em programação",
   },
   {
-    period: "2021 - Presente",
+    period: "2022 - Atual",
     title: "Engenharia Informática",
     description: "4º Ano - Ensino Superior",
   },
   {
-    period: "2017 - 2020",
-    title: "Instituto de Telecomunicações",
+    period: "2018 - 2022",
+    title: "Instituto de Telecomunicações (ITEL)",
     description: "Ensino Médio",
   },
 ];
@@ -51,7 +52,7 @@ const AboutSection = () => {
               aplicações de alta qualidade.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Minha jornada na programação começou há alguns anos, e desde então
+              Minha jornada na programação começou em 2018 e desde então
               venho me especializando em arquitetura de software, boas práticas
               de desenvolvimento e metodologias ágeis.
             </p>
