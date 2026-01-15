@@ -9,6 +9,24 @@ const skills = [
   "Git / CI/CD",
 ];
 
+const education = [
+  {
+    period: "Atual",
+    title: "42 Luanda",
+    description: "Formação intensiva em programação",
+  },
+  {
+    period: "2021 - Presente",
+    title: "Engenharia Informática",
+    description: "4º Ano - Ensino Superior",
+  },
+  {
+    period: "2017 - 2020",
+    title: "Instituto de Telecomunicações",
+    description: "Ensino Médio",
+  },
+];
+
 const AboutSection = () => {
   return (
     <section id="about" className="py-24 px-6 max-w-5xl mx-auto">
@@ -44,21 +62,59 @@ const AboutSection = () => {
             </p>
           </div>
 
-          <div>
-            <h3 className="font-mono text-primary text-sm mb-4">
-              Tecnologias que uso:
-            </h3>
-            <ul className="grid grid-cols-2 gap-2">
-              {skills.map((skill) => (
-                <li
-                  key={skill}
-                  className="flex items-center gap-2 text-sm text-muted-foreground"
-                >
-                  <span className="text-primary">▹</span>
-                  {skill}
-                </li>
-              ))}
-            </ul>
+          <div className="space-y-8">
+            <div>
+              <h3 className="font-mono text-primary text-sm mb-4">
+                Tecnologias que uso:
+              </h3>
+              <ul className="grid grid-cols-2 gap-2">
+                {skills.map((skill) => (
+                  <li
+                    key={skill}
+                    className="flex items-center gap-2 text-sm text-muted-foreground"
+                  >
+                    <span className="text-primary">▹</span>
+                    {skill}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-mono text-primary text-sm mb-4">
+                Formação Acadêmica:
+              </h3>
+              <div className="relative">
+                {/* Timeline line */}
+                <div className="absolute left-[7px] top-2 bottom-2 w-px bg-border" />
+                
+                <div className="space-y-6">
+                  {education.map((item, index) => (
+                    <motion.div
+                      key={item.title}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.4, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="relative pl-6"
+                    >
+                      {/* Timeline dot */}
+                      <div className="absolute left-0 top-1.5 w-[15px] h-[15px] rounded-full bg-primary border-2 border-background" />
+                      
+                      <span className="text-xs font-mono text-primary">
+                        {item.period}
+                      </span>
+                      <h4 className="font-semibold text-foreground text-sm">
+                        {item.title}
+                      </h4>
+                      <p className="text-xs text-muted-foreground">
+                        {item.description}
+                      </p>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </motion.div>
