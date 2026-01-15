@@ -44,7 +44,7 @@ const HeroSection = () => {
           transition={{ delay: 0.2 }}
           className="font-mono text-primary mb-4 text-sm md:text-base"
         >
-          Olá, meu nome é
+          Seja bem-vindo ao meu portifólio, chamo-me 
         </motion.p>
 
         <motion.h1
