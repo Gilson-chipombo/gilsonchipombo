@@ -3,14 +3,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, Brain, Code } from "lucide-react";
 
 const skills = [
-  "JavaScript / TypeScript",
-  "React / Next.js",
-  "PHP / LARAVEL",
-  "Node.js / Express e Fastify",
-  "PostgreSQL / MongoDB",
-  "Java / Spring",
-  "Docker",
-  "Git",
+  { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+  { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+  { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+  { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+  { name: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
+  { name: "Laravel", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" },
+  { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+  { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+  { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+  { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+  { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+  { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
 ];
 
 const softSkills = [
@@ -198,20 +202,27 @@ const AboutSection = () => {
             </div>
 
             <div>
-              <h3 className="font-mono text-primary text-sm mb-4">
+              <h3 className="text-primary text-sm mb-4 font-semibold tracking-wide uppercase">
                 Tecnologias que uso:
               </h3>
-              <ul className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-3 gap-3">
                 {skills.map((skill) => (
-                  <li
-                    key={skill}
-                    className="flex items-center gap-2 text-sm text-muted-foreground"
+                  <motion.div
+                    key={skill.name}
+                    whileHover={{ scale: 1.1, y: -2 }}
+                    className="flex flex-col items-center gap-2 p-2 rounded-lg bg-muted/50 hover:bg-muted transition-colors cursor-default"
                   >
-                    <span className="text-primary">▹</span>
-                    {skill}
-                  </li>
+                    <img 
+                      src={skill.icon} 
+                      alt={skill.name} 
+                      className="w-8 h-8"
+                    />
+                    <span className="text-xs text-muted-foreground font-medium">
+                      {skill.name}
+                    </span>
+                  </motion.div>
                 ))}
-              </ul>
+              </div>
             </div>
 
             <div>
