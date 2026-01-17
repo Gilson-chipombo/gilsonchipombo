@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
+import { Github, Linkedin, Mail, ChevronDown, Brain, Code, Laptop, GraduationCap } from "lucide-react";
 import profileImage from "@/assets/profile.jpg";
 
 const HeroSection = () => {
-  const scrollToProjects = () => {
-    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+  const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -106,16 +106,49 @@ const HeroSection = () => {
           </a>
         </motion.div>
 
-        {/* CTA Button */}
-        <motion.button
+        {/* CTA Buttons */}
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7 }}
-          onClick={scrollToProjects}
-          className="group font-mono text-sm border border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary/10 transition-all duration-300"
+          className="flex flex-wrap items-center justify-center gap-3"
         >
-          Ver Projetos
-        </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => scrollToSection("projects")}
+            className="font-mono text-sm border border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary/10 transition-all duration-300"
+          >
+            Ver Projetos
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => scrollToSection("skills")}
+            className="flex items-center gap-2 font-mono text-sm border border-muted-foreground/30 text-muted-foreground px-4 py-3 rounded-lg hover:border-primary hover:text-primary transition-all duration-300"
+          >
+            <Brain size={16} />
+            Skills
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => scrollToSection("technologies")}
+            className="flex items-center gap-2 font-mono text-sm border border-muted-foreground/30 text-muted-foreground px-4 py-3 rounded-lg hover:border-primary hover:text-primary transition-all duration-300"
+          >
+            <Laptop size={16} />
+            Tecnologias
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => scrollToSection("education")}
+            className="flex items-center gap-2 font-mono text-sm border border-muted-foreground/30 text-muted-foreground px-4 py-3 rounded-lg hover:border-primary hover:text-primary transition-all duration-300"
+          >
+            <GraduationCap size={16} />
+            Formação
+          </motion.button>
+        </motion.div>
       </motion.div>
 
       {/* Scroll indicator */}

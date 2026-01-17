@@ -180,7 +180,7 @@ const AboutSection = () => {
 
           <div className="space-y-8">
             {/* Skills Buttons */}
-            <div className="flex gap-3">
+            <div id="skills" className="flex gap-3 scroll-mt-24">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -201,7 +201,7 @@ const AboutSection = () => {
               </motion.button>
             </div>
 
-            <div>
+            <div id="technologies" className="scroll-mt-24">
               <h3 className="text-primary text-sm mb-4 font-semibold tracking-wide uppercase">
                 Tecnologias que uso:
               </h3>
@@ -225,7 +225,7 @@ const AboutSection = () => {
               </div>
             </div>
 
-            <div>
+            <div id="education" className="scroll-mt-24">
               <h3 className="font-mono text-primary text-sm mb-4">
                 Formação Acadêmica:
               </h3>
