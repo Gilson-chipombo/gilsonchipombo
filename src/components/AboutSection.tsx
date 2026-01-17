@@ -1,4 +1,6 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { X, Brain, Code } from "lucide-react";
 
 const skills = [
   "JavaScript / TypeScript",
@@ -9,6 +11,34 @@ const skills = [
   "Java / Spring",
   "Docker",
   "Git",
+];
+
+const softSkills = [
+  "Comunicação efetiva",
+  "Trabalho em equipe",
+  "Resolução de problemas",
+  "Pensamento crítico",
+  "Adaptabilidade",
+  "Gestão de tempo",
+  "Liderança",
+  "Criatividade",
+  "Empatia",
+  "Proatividade",
+];
+
+const hardSkills = [
+  "JavaScript / TypeScript",
+  "React / Next.js",
+  "PHP / Laravel",
+  "Node.js / Express / Fastify",
+  "PostgreSQL / MongoDB",
+  "Java / Spring Boot",
+  "Docker / Kubernetes",
+  "Git / GitHub",
+  "REST APIs / GraphQL",
+  "Testes automatizados",
+  "CI/CD",
+  "Linux / Shell Script",
 ];
 
 const education = [
@@ -29,9 +59,89 @@ const education = [
   },
 ];
 
+interface SkillsModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  title: string;
+  skills: string[];
+  icon: React.ReactNode;
+}
+
+const SkillsModal = ({ isOpen, onClose, title, skills, icon }: SkillsModalProps) => {
+  if (!isOpen) return null;
+
+  return (
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="fixed inset-0 bg-background/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+        onClick={onClose}
+      >
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0.9, y: 20 }}
+          transition={{ type: "spring", duration: 0.5 }}
+          className="bg-card border border-border rounded-xl p-6 max-w-md w-full shadow-2xl"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center gap-3">
+              <div className="p-2 bg-primary/10 rounded-lg text-primary">
+                {icon}
+              </div>
+              <h3 className="text-xl font-bold text-foreground">{title}</h3>
+            </div>
+            <button
+              onClick={onClose}
+              className="p-2 hover:bg-muted rounded-lg transition-colors"
+            >
+              <X size={20} className="text-muted-foreground" />
+            </button>
+          </div>
+          
+          <ul className="grid grid-cols-2 gap-3">
+            {skills.map((skill, index) => (
+              <motion.li
+                key={skill}
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.05 }}
+                className="flex items-center gap-2 text-sm text-muted-foreground"
+              >
+                <span className="text-primary">▹</span>
+                {skill}
+              </motion.li>
+            ))}
+          </ul>
+        </motion.div>
+      </motion.div>
+    </AnimatePresence>
+  );
+};
+
 const AboutSection = () => {
+  const [showSoftSkills, setShowSoftSkills] = useState(false);
+  const [showHardSkills, setShowHardSkills] = useState(false);
+
   return (
     <section id="about" className="py-24 px-6 max-w-5xl mx-auto">
+      <SkillsModal
+        isOpen={showSoftSkills}
+        onClose={() => setShowSoftSkills(false)}
+        title="Soft Skills"
+        skills={softSkills}
+        icon={<Brain size={24} />}
+      />
+      <SkillsModal
+        isOpen={showHardSkills}
+        onClose={() => setShowHardSkills(false)}
+        title="Hard Skills"
+        skills={hardSkills}
+        icon={<Code size={24} />}
+      />
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -65,6 +175,28 @@ const AboutSection = () => {
           </div>
 
           <div className="space-y-8">
+            {/* Skills Buttons */}
+            <div className="flex gap-3">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setShowSoftSkills(true)}
+                className="flex items-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-lg font-mono text-sm transition-colors"
+              >
+                <Brain size={18} />
+                Soft Skills
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setShowHardSkills(true)}
+                className="flex items-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-lg font-mono text-sm transition-colors"
+              >
+                <Code size={18} />
+                Hard Skills
+              </motion.button>
+            </div>
+
             <div>
               <h3 className="font-mono text-primary text-sm mb-4">
                 Tecnologias que uso:
