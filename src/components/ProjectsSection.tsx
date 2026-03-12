@@ -3,25 +3,46 @@ import ProjectCard from "./ProjectCard";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
+import API from "@/assets/api.jpeg";
+import arrende from "@/assets/arrendaaqui.png";
+import route42 from "@/assets/route.png";
 
 const projects = [
   {
-    title: "E-commerce Platform",
+    title: "ArrendeAqui",
+    description:
+      "ArrendeAqui é uma plataforma de que permite aos usuários encontrar casas para arrendar de forma simplificada e segura, conectando locatários e proprietários em um marketplace eficiente.",
+    image: arrende,
+    technologies: ["React", "Node.js", "PostgreSQL", "Stripe"],
+    githubUrl: "https://github.com/Gilson-chipombo/ArrendeAqui",
+    liveUrl: "https://arrenda-aqui.vercel.app/",
+  },
+  {
+    title: "ShopeYetu -E-commerce",
     description:
       "Plataforma de e-commerce completa com carrinho de compras, sistema de pagamentos integrado, painel administrativo e dashboard de vendas em tempo real.",
     image: project1,
     technologies: ["React", "Node.js", "PostgreSQL", "Stripe"],
-    githubUrl: "https://github.com/seuusuario/ecommerce",
-    liveUrl: "https://ecommerce-demo.com",
+    githubUrl: "https://github.com/Gilson-chipombo/shopeYetu",
+    liveUrl: "https://shope-yetu.vercel.app/",
   },
   {
-    title: "Task Management App",
+    title: "API para App de transporte",
     description:
-      "Aplicação de gerenciamento de tarefas com drag and drop, notificações em tempo real, colaboração em equipe e integração com calendário.",
-    image: project2,
-    technologies: ["Next.js", "TypeScript", "Prisma", "Tailwind"],
-    githubUrl: "https://github.com/seuusuario/taskapp",
-    liveUrl: "https://taskapp-demo.com",
+      "Aplicação de gerenciamento de rotas, conectando estudantes e motoristas, permitindo notificações em tempo real e controle da localização.",
+    image: API,
+    technologies: ["Nest.js", "TypeScript", "Prisma"],
+    githubUrl: "https://github.com/Gilson-chipombo/42RouteAPI-42Luanda",
+    liveUrl: "https://four2routeapi.onrender.com/api/docs",
+  },
+  {
+    title: "42Route Web",
+    description:
+      "Aplicação de gerenciamento de rotas, conectando estudantes e motoristas, permitindo notificações em tempo real e controle da localização.",
+    image: route42,
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    githubUrl: "https://github.com/Gilson-chipombo/42RouteAPI-42Luanda",
+    liveUrl: "#",
   },
   {
     title: "Real-time Chat Application",
@@ -29,7 +50,7 @@ const projects = [
       "Chat em tempo real com suporte a grupos, compartilhamento de arquivos, mensagens de voz e videochamadas integradas.",
     image: project3,
     technologies: ["React", "Socket.io", "MongoDB", "WebRTC"],
-    githubUrl: "https://github.com/seuusuario/chatapp",
+    githubUrl: "https://github.com/Gilson-chipombo",
   },
 ];
 
