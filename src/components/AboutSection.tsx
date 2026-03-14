@@ -34,14 +34,13 @@ const hardSkills = [
   "JavaScript / TypeScript",
   "React / Next.js",
   "PHP / Laravel",
-  "Node.js / Express / Fastify",
+  "Node.js / Nest",
   "PostgreSQL / MySQL",
   "Java / Spring Boot",
-  "Docker / Kubernetes",
+  "Docker",
   "Git / GitHub",
-  "REST APIs / GraphQL",
+  "REST APIs",
   "Testes automatizados",
-  "CI/CD",
   "Linux / Shell Script",
 ];
 
