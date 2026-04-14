@@ -6,8 +6,28 @@ import project3 from "@/assets/project-3.jpg";
 import API from "@/assets/api.jpeg";
 import arrende from "@/assets/arrendaaqui.png";
 import route42 from "@/assets/route.png";
+import WABOT from "@/assets/WA-BOT.jpg"
+import USSD from "@/assets/ussd.jpg"
 
 const projects = [
+   {
+    title: "Whatsapp Bot + Gemini API",
+    description:
+      "Um bot inteligente para WhatsApp que utiliza o Google Gemini AI para gerar respostas automáticas em tempo real. A aplicação processa mensagens através de uma fila assíncrona e salva todo o histórico de conversas em um banco de dados PostgreSQL.",
+    image: WABOT,
+    technologies: ["NestJS", "TypeScript", "PostgreSQL", "Prisma", "Redis", "BullMQ"],
+    githubUrl: "https://github.com/Gilson-chipombo/Whatsapp-Bot-Integrado-Com-Gemini-API",
+    liveUrl: "https://github.com/Gilson-chipombo/Whatsapp-Bot-Integrado-Com-Gemini-API",
+  },
+  {
+    title: "Simulação USSD + Webhook + Twillio",
+    description:
+      "Este projeto é uma simulação de um sistema USSD com Twilio e SMS. Simula um menu interativo por SMS usando a plataforma Twilio usando o Serviço USSD da African Talks",
+    image: USSD,
+    technologies: ["Node.js", "javascript", "Twillio", "African Talks"],
+    githubUrl: "https://github.com/Gilson-chipombo/Simulacao_USSD_COM-TWILLIO_E_SMS",
+    liveUrl: "https://github.com/Gilson-chipombo/Simulacao_USSD_COM-TWILLIO_E_SMS",
+  },
   {
     title: "ArrendeAqui",
     description:
