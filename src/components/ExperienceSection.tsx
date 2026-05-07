@@ -17,7 +17,7 @@ const experiences = [
       "Consumo de webhooks e processamento de eventos",
       "Correção de bugs e melhorias contínuas em produção"
     ],
-    skills: ["Node.js", "NestJS", "PostgreSQL", "Redis", "BullMQ", "WhatsApp API", "TypeScript"],
+    skills: ["Node.js", "NestJS", "PostgreSQL", "Gemini AI", "Redis", "BullMQ", "WhatsApp API", "TypeScript"],
     type: "full-time"
   },
   {
