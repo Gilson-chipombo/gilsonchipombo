@@ -1,9 +1,9 @@
-import HeroSection from "@/components/HeroSection";
 import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import ThemeToggle from "@/components/ThemeToggle";
+import PortfolioSection from "@/components/PortfolioSection";
+import Footer from "@/components/Footer";
 
-const Index = () => {
+const Portfolio = () => {
   return (
     <main className="min-h-screen bg-background">
       {/* Navigation */}
@@ -14,12 +14,10 @@ const Index = () => {
         <ThemeToggle />
       </div>
       
-      <div id="hero">
-        <HeroSection />
-      </div>
+      <PortfolioSection />
       <Footer />
     </main>
   );
 };
 
-export default Index;
+export default Portfolio;

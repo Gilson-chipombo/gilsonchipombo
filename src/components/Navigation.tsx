@@ -33,7 +33,7 @@ const Navigation = () => {
     { label: "Home", action: () => handleNavigation("/") },
     { label: "About", action: () => handleNavigation("/about") },
     { label: "Experience", action: () => handleNavigation("/experience") },
-    { label: "Portfólio", action: () => handleNavigation("/", "projects") },
+    { label: "Portfólio", action: () => handleNavigation("/portfolio") },
   ];
 
   return (
