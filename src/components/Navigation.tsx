@@ -173,7 +173,7 @@ const Navigation = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
                     onClick={item.action}
-                    className={`block w-full text-left px-4 py-2 font-bold rounded-full transition-all duration-300 flex items-center gap-2 ${
+                    className={`w-full text-left px-4 py-2 font-bold rounded-full transition-all duration-300 flex items-center gap-2 ${
                       isActive
                         ? "text-base text-red-600 bg-red-600/30 border border-red-600"
                         : "text-sm text-foreground/80 hover:text-black hover:bg-white/10"
