@@ -2,12 +2,20 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { ExternalLink, Github, Code2, Zap, Users, Layers } from "lucide-react";
 
+// Import project images
+import arrendaaqui from "@/assets/arrendaaqui.png";
+import api from "@/assets/api.jpeg";
+import wabot from "@/assets/WA-BOT.jpg";
+import shopeyetu from "@/assets/shopeyetu.png";
+import route from "@/assets/route.png";
+import ussd from "@/assets/ussd.jpg";
+
 const projects = [
   {
     id: 1,
     title: "E-Commerce Platform",
     description: "Plataforma completa de e-commerce com sistema de pagamentos integrado, gerenciamento de inventário e dashboard administrativo.",
-    image: "arrendaaqui.png",
+    image: arrendaaqui,
     category: "Full-Stack",
     technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Redux"],
     features: [
@@ -25,7 +33,7 @@ const projects = [
     id: 2,
     title: "API REST Escalável",
     description: "API REST robusta e escalável com arquitetura de microsserviços, documentação completa e testes de cobertura alta.",
-    image: "api.jpeg",
+    image: api,
     category: "Backend",
     technologies: ["Node.js", "Express", "MongoDB", "Docker", "Jest"],
     features: [
@@ -43,7 +51,7 @@ const projects = [
     id: 3,
     title: "WhatsApp Bot + Gemini IA",
     description: "Desenvolvimento de sistema SaaS para atendimento automatizado via WhatsApp",
-    image: "WA-BOT.jpg",
+    image: wabot,
     category: "Back-End",
     technologies: ["WhatsApp API", "Gemini API", "NestJS", "Prisma"],
     features: [
@@ -59,7 +67,7 @@ const projects = [
     id: 4,
     title: "Chat Application",
     description: "Aplicação de chat em tempo real com suporte a múltiplas salas, notificações push e sincronização de mensagens.",
-    image: "shopeyetu.png",
+    image: shopeyetu,
     category: "Full-Stack",
     technologies: ["React", "Socket.io", "Express", "MongoDB", "Firebase"],
     features: [
@@ -77,7 +85,7 @@ const projects = [
     id: 5,
     title: "Task Management App",
     description: "Aplicação de gerenciamento de tarefas com colaboração em tempo real, comentários e sistema de notificações.",
-    image: "route.png",
+    image: route,
     category: "Full-Stack",
     technologies: ["Vue.js", "Firebase", "Vuetify", "JavaScript", "PWA"],
     features: [
@@ -95,20 +103,21 @@ const projects = [
     id: 6,
     title: "Weather App",
     description: "Aplicação de previsão do tempo com integração de API externa, geolocalização e previsão estendida.",
-    image: "ussd.jpg",
+    image: ussd,
     category: "Frontend",
     technologies: ["React", "OpenWeather API", "Axios", "Tailwind CSS", "Geolocation"],
     features: [
-      "Previsão em tempo real",
-      "Geolocalização",
-      "Múltiplas cidades",
-      "Gráficos de temperatura",
-      "Dark mode"
+      "Autenticação OAuth2",
+      "Rate limiting",
+      "Cache com Redis",
+      "Logging estruturado",
+      "CI/CD pipeline"
     ],
     link: "#",
     github: "#",
     status: "Completo"
   }
+
 ];
 
 const categories = ["Todos", "Full-Stack", "Frontend", "Backend"];
@@ -194,7 +203,7 @@ const PortfolioSection = () => {
                 {/* Image Container */}
                 <div className="relative h-48 md:h-56 overflow-hidden bg-black/20">
                   <img
-                    src={`/src/assets/${project.image}`}
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                   />
