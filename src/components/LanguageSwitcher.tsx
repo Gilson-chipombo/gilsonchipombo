@@ -9,7 +9,7 @@ const LanguageSwitcher = () => {
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: 0.5 }}
-      className="fixed top-4 right-4 z-40 flex items-center gap-2 bg-white/10 dark:bg-white/5 backdrop-blur-2xl border border-white/20 rounded-full p-1"
+      className="fixed top-4 right-20 z-50 flex items-center gap-2 bg-white/10 dark:bg-white/5 backdrop-blur-2xl border border-white/20 rounded-full p-1"
     >
       <button
         onClick={() => setLanguage("en")}

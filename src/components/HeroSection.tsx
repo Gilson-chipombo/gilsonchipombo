@@ -61,20 +61,8 @@ const HeroSection = () => {
             >
               <Github className="w-6 h-6" />
             </motion.a>
-            <motion.a
-              whileHover={{ scale: 1.15 }}
-              href="#"
-              className="w-10 h-10 rounded-lg bg-black flex items-center justify-center text-gray-400 hover:text-gray-300 transition-colors"
-            >
-              <Figma className="w-6 h-6" />
-            </motion.a>
-            <motion.a
-              whileHover={{ scale: 1.15 }}
-              href="#"
-              className="w-10 h-10 rounded-lg bg-black flex items-center justify-center text-gray-400 hover:text-gray-300 transition-colors"
-            >
-              <Youtube className="w-6 h-6" />
-            </motion.a>
+          
+          
           </div>
         </motion.div>
       </div>
