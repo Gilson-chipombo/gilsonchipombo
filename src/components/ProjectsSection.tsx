@@ -6,8 +6,8 @@ import project3 from "@/assets/project-3.jpg";
 import API from "@/assets/api.jpeg";
 import arrende from "@/assets/arrendaaqui.png";
 import route42 from "@/assets/route.png";
-import WABOT from "@/assets/WA-BOT.jpg"
-import USSD from "@/assets/ussd.jpg"
+import WABOT from "@/assets/WA-BOT.jpg";
+import USSD from "@/assets/ussd.jpg";
 
 const projects = [
    {
