@@ -1,10 +1,9 @@
-import HeroSection from "@/components/HeroSection";
-import ProjectsSection from "@/components/ProjectsSection";
 import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import ThemeToggle from "@/components/ThemeToggle";
+import ExperienceSection from "@/components/ExperienceSection";
+import Footer from "@/components/Footer";
 
-const Index = () => {
+const Experience = () => {
   return (
     <main className="min-h-screen bg-background">
       {/* Navigation */}
@@ -15,15 +14,10 @@ const Index = () => {
         <ThemeToggle />
       </div>
       
-      <div id="hero">
-        <HeroSection />
-      </div>
-      <div id="projects">
-        <ProjectsSection />
-      </div>
+      <ExperienceSection />
       <Footer />
     </main>
   );
 };
 
-export default Index;
+export default Experience;

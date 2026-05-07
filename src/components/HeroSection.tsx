@@ -1,164 +1,114 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, ChevronDown, Brain, Code, Laptop, GraduationCap } from "lucide-react";
-import profileImage from "@/assets/profile.jpg";
+import { Github, Linkedin, Figma, Youtube, Globe } from "lucide-react";
+import coverImage from "@/assets/foto_de_capa.png";
 
 const HeroSection = () => {
-  const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center relative px-6">
-      {/* Background gradient effects */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
-      </div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-center z-10"
-      >
-        {/* Profile Image */}
+    <section className="min-h-screen flex items-center justify-between relative px-8 md:px-16 lg:px-20 py-12 pt-20 md:pt-12">
+      {/* Left side */}
+      <div className="flex-1 flex flex-col justify-between h-screen relative z-10">
+        {/* Top section with descriptions */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.1, duration: 0.5 }}
-          className="mb-8"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="pt-20"
         >
-          <div className="relative inline-block">
-            <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl" />
-            <img
-              src={profileImage}
-              alt="Foto de perfil"
-              className="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-primary/30 glow-primary"
-            />
+          <div className="mb-16">
+            <h3 className="text-xl md:text-2xl font-bold mb-3">FULL STACK DEVELOPER</h3>
+            <p className="text-sm md:text-base text-muted-foreground max-w-xs leading-relaxed">
+              Transforming design into functional code, with a focus on performance and scalability.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-xl md:text-2xl font-bold mb-3">AI Entusiast</h3>
+            <p className="text-sm md:text-base text-muted-foreground max-w-xs leading-relaxed">
+              Turning concepts into modern, responsive interfaces focused on user experience.
+            </p>
           </div>
         </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-          className="font-mono text-primary mb-4 text-sm md:text-base"
-        >
-          Seja bem-vindo ao meu portifólio, chamo-me 
-        </motion.p>
-
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4"
-        >
-          <span className="text-gradient">Gilson  Chipombo</span>
-        </motion.h1>
-
-        <motion.h5
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="text-2xl md:text-4xl lg:text-5xl font-bold text-muted-foreground mb-6"
-        >
-          Dev. Full Stack com foco em Backend e Testes
-        </motion.h5>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="text-muted-foreground max-w-xl mx-auto mb-8 text-base md:text-lg"
-        >
-          Transformo ideias em aplicações web modernas e escaláveis.
-          Focado em tecnologias como React, Laravel e Node.js.
-        </motion.p>
-
-        {/* Social Links */}
+        {/* Bottom section with location and social links */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="flex items-center justify-center gap-6 mb-12"
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="pb-20"
         >
-          <a
-            href="https://github.com/Gilson-chipombo"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-primary transition-colors duration-300"
-          >
-            <Github className="w-6 h-6" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/gilson-bravo-fernando-chipombo-aa0ba4209/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-primary transition-colors duration-300"
-          >
-            <Linkedin className="w-6 h-6" />
-          </a>
-          <a
-            href="fernandochipombo@email.com"
-            className="text-muted-foreground hover:text-primary transition-colors duration-300"
-          >
-            <Mail className="w-6 h-6" />
-          </a>
-        </motion.div>
+          <div className="flex items-center gap-3 mb-8">
+            <Globe className="w-4 h-4 text-primary" />
+            <span className="text-sm font-mono">Located in Angola</span>
+          </div>
 
-        {/* CTA Buttons */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.7 }}
-          className="flex flex-wrap items-center justify-center gap-3"
-        >
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => scrollToSection("projects")}
-            className="font-mono text-sm border border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary/10 transition-all duration-300"
-          >
-            Ver Projetos
-          </motion.button>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => scrollToSection("skills")}
-            className="flex items-center gap-2 font-mono text-sm border border-muted-foreground/30 text-muted-foreground px-4 py-3 rounded-lg hover:border-primary hover:text-primary transition-all duration-300"
-          >
-            <Brain size={16} />
-            Skills
-          </motion.button>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => scrollToSection("technologies")}
-            className="flex items-center gap-2 font-mono text-sm border border-muted-foreground/30 text-muted-foreground px-4 py-3 rounded-lg hover:border-primary hover:text-primary transition-all duration-300"
-          >
-            <Laptop size={16} />
-            Tecnologias
-          </motion.button>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => scrollToSection("education")}
-            className="flex items-center gap-2 font-mono text-sm border border-muted-foreground/30 text-muted-foreground px-4 py-3 rounded-lg hover:border-primary hover:text-primary transition-all duration-300"
-          >
-            <GraduationCap size={16} />
-            Formação
-          </motion.button>
+          {/* Social Links */}
+          <div className="flex flex-col gap-6">
+            <motion.a
+              whileHover={{ scale: 1.15 }}
+              href="https://www.linkedin.com/in/gilson-bravo-fernando-chipombo-aa0ba4209/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-lg bg-black flex items-center justify-center text-gray-400 hover:text-gray-300 transition-colors"
+            >
+              <Linkedin className="w-6 h-6" />
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.15 }}
+              href="https://github.com/Gilson-chipombo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-lg bg-black flex items-center justify-center text-gray-400 hover:text-gray-300 transition-colors"
+            >
+              <Github className="w-6 h-6" />
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.15 }}
+              href="#"
+              className="w-10 h-10 rounded-lg bg-black flex items-center justify-center text-gray-400 hover:text-gray-300 transition-colors"
+            >
+              <Figma className="w-6 h-6" />
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.15 }}
+              href="#"
+              className="w-10 h-10 rounded-lg bg-black flex items-center justify-center text-gray-400 hover:text-gray-300 transition-colors"
+            >
+              <Youtube className="w-6 h-6" />
+            </motion.a>
+          </div>
         </motion.div>
-      </motion.div>
+      </div>
 
-      {/* Scroll indicator */}
+      {/* Right side - Image with background text */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-        className="absolute bottom-8 animate-bounce"
+        initial={{ opacity: 0, x: 50, scale: 0.9 }}
+        animate={{ opacity: 1, x: 0, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="flex-1 relative h-screen flex items-center justify-center overflow-hidden"
       >
-        <ChevronDown className="w-6 h-6 text-muted-foreground" />
+        {/* Large background text - Carousel effect */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden w-full">
+          <motion.div
+            animate={{ x: ["calc(100vw + 500px)", "calc(-100% - 500px)"] }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            className="text-9xl md:text-[150px] lg:text-[200px] font-bold text-muted-foreground/10 leading-none whitespace-nowrap absolute"
+          >
+            GILSON CHIPOMBO
+          </motion.div>
+        </div>
+
+        {/* Cover image */}
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.3 }}
+          className="relative z-5 w-full max-w-md md:max-w-lg"
+        >
+          <img
+            src={coverImage}
+            alt="Gilson Chipombo"
+            className="w-full h-auto object-cover rounded-lg shadow-2xl"
+          />
+        </motion.div>
       </motion.div>
     </section>
   );
