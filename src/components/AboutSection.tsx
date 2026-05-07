@@ -163,7 +163,7 @@ const AboutSection = () => {
           </div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8">
-            Quem é <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-500">Gilson</span>?
+            Quem é <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-500">Gilson Chipombo</span>?
           </h2>
 
           {/* About Description */}
@@ -176,8 +176,7 @@ const AboutSection = () => {
               className="space-y-4"
             >
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Sou um desenvolvedor fullstack apaixonado por criar soluções digitais
-                que fazem a diferença. Com experiência em desenvolvimento web moderno,
+                Sou um desenvolvedor fullstack com +4 anos de experiência em desenvolvimento web moderno,
                 trabalho com as tecnologias mais recentes do mercado para entregar
                 aplicações de alta qualidade.
               </p>
@@ -207,7 +206,7 @@ const AboutSection = () => {
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <Award className="w-5 h-5 text-primary" />
-                  <span>6+ anos de experiência</span>
+                  <span>+4 anos de experiência</span>
                 </div>
               </div>
             </motion.div>

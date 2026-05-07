@@ -2,12 +2,14 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Menu, X, Home, User, Briefcase, Folder, Mail } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
+import { useLanguage } from "@/context/LanguageContext";
 import logo from "@/assets/logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  const { t } = useLanguage();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -31,10 +33,10 @@ const Navigation = () => {
   };
 
   const menuItems = [
-    { label: "Home", path: "/", icon: Home, action: () => handleNavigation("/") },
-    { label: "About", path: "/about", icon: User, action: () => handleNavigation("/about") },
-    { label: "Experience", path: "/experience", icon: Briefcase, action: () => handleNavigation("/experience") },
-    { label: "Portfólio", path: "/portfolio", icon: Folder, action: () => handleNavigation("/portfolio") },
+    { label: t.nav.home, path: "/", icon: Home, action: () => handleNavigation("/") },
+    { label: t.nav.about, path: "/about", icon: User, action: () => handleNavigation("/about") },
+    { label: t.nav.experience, path: "/experience", icon: Briefcase, action: () => handleNavigation("/experience") },
+    { label: t.nav.portfolio, path: "/portfolio", icon: Folder, action: () => handleNavigation("/portfolio") },
   ];
 
   return (
@@ -138,7 +140,7 @@ const Navigation = () => {
                 className="px-6 py-2 bg-black text-white rounded-full font-medium text-sm shadow-lg hover:bg-neutral-900 transition-all duration-300 whitespace-nowrap flex items-center gap-2"
               >
                 <Mail size={18} />
-                Contactos
+                {t.nav.contact}
               </motion.button>
 
               {/* Mobile Menu Button */}
