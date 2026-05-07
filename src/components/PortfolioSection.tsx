@@ -41,17 +41,15 @@ const projects = [
   },
   {
     id: 3,
-    title: "Dashboard Analytics",
-    description: "Dashboard interativo com visualizações de dados em tempo real, gráficos dinâmicos e relatórios customizáveis.",
+    title: "WhatsApp Bot + Gemini IA",
+    description: "Desenvolvimento de sistema SaaS para atendimento automatizado via WhatsApp",
     image: "WA-BOT.jpg",
-    category: "Frontend",
-    technologies: ["React", "Recharts", "Tailwind CSS", "TypeScript", "Zustand"],
+    category: "Back-End",
+    technologies: ["WhatsApp API", "Gemini API", "NestJS", "Prisma"],
     features: [
-      "Gráficos em tempo real",
-      "Exportação de relatórios",
-      "Dark mode",
-      "Responsivo",
-      "Performance otimizada"
+      "Integração com WhatsApp Cloud API (envio, recebimento e processamento de webhooks)",
+      "Integração com IA (Gemini) para geração automática de respostas",
+      "Persistência de histórico de conversas utilizando PostgreSQL e Prisma ORM",
     ],
     link: "#",
     github: "#",
@@ -324,11 +322,11 @@ const PortfolioSection = () => {
         >
           <div className="text-center">
             <div className="text-3xl md:text-5xl font-bold text-black mb-2">{projects.length}+</div>
-            <p className="text-sm md:text-base text-muted-foreground">Projetos Entregues</p>
+            <p className="text-sm md:text-base text-muted-foreground">Projetos Desenvolvidos</p>
           </div>
           <div className="text-center">
             <div className="text-3xl md:text-5xl font-bold text-black mb-2">
-              {new Set(projects.flatMap(p => p.technologies)).size}+
+              5+
             </div>
             <p className="text-sm md:text-base text-muted-foreground">Tecnologias</p>
           </div>

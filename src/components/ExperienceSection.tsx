@@ -4,67 +4,71 @@ import { Briefcase, Calendar, MapPin, ArrowRight } from "lucide-react";
 const experiences = [
   {
     id: 1,
-    role: "Desenvolvedor Full Stack",
-    company: "Empresa X",
-    location: "Luanda, Angola",
-    period: "2023 - Presente",
-    description: "Desenvolvimento de aplicações web full-stack usando React, Node.js e PostgreSQL. Responsável por arquitetura de sistemas e otimização de performance.",
+    role: "Desenvolvedor Backend",
+    company: "Clou Business Lda",
+    location: "Angola",
+    period: "2026 — Atual",
+    description: "Desenvolvimento e manutenção de sistema SaaS multi-tenant para automação de atendimento e gestão de leads. Responsável pela arquitetura backend e integração com serviços terceiros.",
     responsibilities: [
-      "Desenvolvimento de features em React e TypeScript",
-      "API REST com Node.js e Express",
-      "Otimização de queries PostgreSQL",
-      "Mentoring de desenvolvedores juniores"
+      "Desenvolvimento de APIs REST escaláveis com Node.js, NestJS e PostgreSQL",
+      "Integração com APIs externas (WhatsApp Cloud API, serviços de IA)",
+      "Processamento assíncrono com filas (BullMQ + Redis)",
+      "Modelagem e otimização de banco de dados relacional",
+      "Consumo de webhooks e processamento de eventos",
+      "Correção de bugs e melhorias contínuas em produção"
     ],
-    skills: ["React", "Node.js", "PostgreSQL", "Docker", "AWS"],
+    skills: ["Node.js", "NestJS", "PostgreSQL", "Redis", "BullMQ", "WhatsApp API", "TypeScript"],
     type: "full-time"
   },
   {
     id: 2,
-    role: "Desenvolvedor Backend",
-    company: "Startup Tech",
-    location: "Luanda, Angola",
-    period: "2022 - 2023",
-    description: "Desenvolvimento e manutenção de APIs robustas. Implementação de sistemas de autenticação e processamento de dados em larga escala.",
+    role: "Desenvolvedor Full Stack (Freelance)",
+    company: "Autônomo",
+    location: "Angola",
+    period: "2023 — 2025",
+    description: "Desenvolvimento de sistemas personalizados para clientes. Atuação completa em stack full-stack com foco em soluções escaláveis.",
     responsibilities: [
-      "Arquitetura de microsserviços",
-      "Implementação de JWT authentication",
-      "Otimização de performance",
-      "Integração com serviços terceiros"
+      "Desenvolvimento de sistemas personalizados para clientes",
+      "Criação de APIs REST e integração com bancos de dados",
+      "Implementação de sistemas de gestão (salários, controle e monitoramento)",
+      "Resolução de problemas técnicos em aplicações e infraestrutura",
+      "Desenvolvimento de funcionalidades frontend e backend"
     ],
-    skills: ["Laravel", "PHP", "MySQL", "Redis", "Microserviços"],
-    type: "full-time"
+    skills: ["React", "Node.js", "Express", "PostgreSQL", "MongoDB", "TypeScript", "Tailwind CSS"],
+    type: "freelance"
   },
   {
     id: 3,
-    role: "Desenvolvedor Frontend",
-    company: "Agência Digital",
-    location: "Luanda, Angola",
-    period: "2021 - 2022",
-    description: "Desenvolvimento de interfaces responsivas e interativas. Trabalho com designers para implementar designs complexos.",
+    role: "Desenvolvedor Full Stack Junior (Estágio)",
+    company: "ITEL - Instituto de Telecomunições",
+    location: "Angola",
+    period: "2022",
+    description: "Primeiro contato com desenvolvimento profissional. Participação em projetos com supervisão técnica e aprendizado de boas práticas.",
     responsibilities: [
-      "Desenvolvimento com React e Vue.js",
-      "Implementação de designs responsive",
-      "Otimização de performance de frontend",
-      "Testes unitários e de integração"
+      "Apoio no desenvolvimento de sistemas web",
+      "Participação em projetos com supervisão técnica",
+      "Aprendizado de boas práticas de programação",
+      "Correção de bugs e manutenção de sistemas",
+      "Colaboração com equipe técnica"
     ],
-    skills: ["React", "Vue.js", "Tailwind CSS", "Jest", "Figma"],
-    type: "full-time"
+    skills: ["HTML/CSS", "JavaScript", "PHP", "MySQL", "Git"],
+    type: "internship"
   },
   {
     id: 4,
-    role: "Estagiário Desenvolvedor",
-    company: "Instituto de TI",
-    location: "Luanda, Angola",
-    period: "2020 - 2021",
-    description: "Primeira experiência profissional. Aprendizado de boas práticas de desenvolvimento e trabalho em equipe.",
+    role: "Desenvolvedor Full Stack Junior",
+    company: "ZonaLink SU",
+    location: "Angola",
+    period: "2020 — 2021",
+    description: "Primeira experiência profissional atuando como desenvolvedor junior em ambiente corporativo.",
     responsibilities: [
-      "Desenvolvimento de features simples",
-      "Correção de bugs",
-      "Documentação de código",
-      "Participação em code reviews"
+      "Desenvolvimento de funcionalidades frontend e backend",
+      "Correção de bugs e manutenção de sistemas",
+      "Colaboração com equipe técnica",
+      "Documentação de código e processos"
     ],
-    skills: ["JavaScript", "HTML/CSS", "Git", "SQL", "Bootstrap"],
-    type: "internship"
+    skills: ["JavaScript", "HTML/CSS", "Bootstrap", "PHP", "MySQL"],
+    type: "full-time"
   }
 ];
 
@@ -109,7 +113,7 @@ const ExperienceSection = () => {
                 className={`relative md:w-1/2 ${index % 2 === 0 ? "md:mr-auto md:pr-12" : "md:ml-auto md:pl-12"}`}
               >
                 {/* Timeline dot */}
-                <div className="absolute left-0 md:left-1/2 top-8 w-6 h-6 rounded-full bg-black border-4 border-background transform md:-translate-x-1/2 -translate-x-3 z-10" />
+                <div className="absolute left-0 md:left-1/2 top-8 w-6 h-6   transform md:-translate-x-1/2 -translate-x-3 z-10" />
 
                 {/* Card */}
                 <div className="ml-12 md:ml-0 p-6 md:p-8 rounded-2xl bg-gradient-to-br from-black/5 to-black/10 border border-black/20 hover:border-black/40 transition-all hover:shadow-xl">

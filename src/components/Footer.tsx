@@ -52,7 +52,7 @@ const Footer = () => {
           >
             <h3 className="text-lg font-bold text-white mb-4">Gilson Chipombo</h3>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Desenvolvedor Full Stack apaixonado por criar experiências web incríveis com tecnologias modernas.
+              Desenvolvedor Full Stack com +4 experiência com desenvolvimento web e Integrações com Inteligência Artificial.
             </p>
             <div className="pt-2 space-y-2">
               {contactInfo.map((info, index) => {
