@@ -144,9 +144,9 @@ const Footer = () => {
             © {currentYear} Gilson Chipombo. Todos os direitos reservados.
           </p>
           <div className="flex items-center gap-2 text-xs text-gray-500">
-            <span>Feito com</span>
-            <span className="text-red-600">❤️</span>
-            <span>usando React + TypeScript</span>
+            <span></span>
+            <span className="text-red-600"></span>
+            <span></span>
           </div>
         </motion.div>
       </div>

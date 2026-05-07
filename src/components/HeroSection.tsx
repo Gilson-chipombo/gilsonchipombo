@@ -1,44 +1,44 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Figma, Youtube, Globe } from "lucide-react";
+import { Github, Linkedin, Figma, Youtube, MapPin } from "lucide-react";
 import coverImage from "@/assets/foto_de_capa.png";
 
 const HeroSection = () => {
   return (
     <section className="min-h-screen flex items-center justify-between relative px-8 md:px-16 lg:px-20 py-12 pt-20 md:pt-12">
       {/* Left side */}
-      <div className="flex-1 flex flex-col justify-between h-screen relative z-10">
+      <div className="flex-1 flex flex-col justify-center h-screen relative z-10">
         {/* Top section with descriptions */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="pt-20"
+          className="mb-20 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12"
         >
-          <div className="mb-16">
+          <div>
             <h3 className="text-xl md:text-2xl font-bold mb-3">FULL STACK DEVELOPER</h3>
-            <p className="text-sm md:text-base text-muted-foreground max-w-xs leading-relaxed">
-              Transforming design into functional code, with a focus on performance and scalability.
+            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+              Building end-to-end solutions with React, TypeScript, and modern backend technologies. I craft seamless experiences from database to user interface.
             </p>
           </div>
 
           <div>
-            <h3 className="text-xl md:text-2xl font-bold mb-3">AI Entusiast</h3>
-            <p className="text-sm md:text-base text-muted-foreground max-w-xs leading-relaxed">
-              Turning concepts into modern, responsive interfaces focused on user experience.
+            <h3 className="text-xl md:text-2xl font-bold mb-3">AI ENTHUSIAST</h3>
+            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+              Exploring the frontier of artificial intelligence and machine learning. Integrating cutting-edge AI solutions into practical applications.
             </p>
           </div>
         </motion.div>
 
-        {/* Bottom section with location and social links */}
+        {/* Center section with location and social links */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="pb-20"
+          className="flex flex-col items-start gap-8"
         >
-          <div className="flex items-center gap-3 mb-8">
-            <Globe className="w-4 h-4 text-primary" />
-            <span className="text-sm font-mono">Located in Angola</span>
+          <div className="flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
+            <MapPin className="w-5 h-5 text-red-600" />
+            <span className="text-sm font-mono font-semibold">Located in Angola</span>
           </div>
 
           {/* Social Links */}
@@ -61,8 +61,6 @@ const HeroSection = () => {
             >
               <Github className="w-6 h-6" />
             </motion.a>
-          
-          
           </div>
         </motion.div>
       </div>
