@@ -5,6 +5,7 @@ export const en = {
     about: "About",
     experience: "Experience",
     portfolio: "Portfolio",
+    awards: "Awards",
     contact: "Contact",
   },
 
@@ -51,6 +52,15 @@ export const en = {
     ctaButton: "Get in Touch",
   },
 
+  // Awards Section
+  awards: {
+    title: "Awards & Achievements",
+    subtitle: "Recognition and participation in events that marked my professional journey",
+    awards: "Awards & Recognitions",
+    events: "Events & Conferences",
+    certifications: "Professional Certifications",
+  },
+
   // Footer
   footer: {
     description:
@@ -71,6 +81,7 @@ export const pt = {
     about: "Sobre",
     experience: "Experiência",
     portfolio: "Portfólio",
+    awards: "Prêmios",
     contact: "Contacto",
   },
 
@@ -115,6 +126,15 @@ export const pt = {
     cta: "Tem um projeto em mente?",
     ctaDesc: "Vamos criar algo incrível juntos!",
     ctaButton: "Entre em Contacto",
+  },
+
+  // Seção Awards
+  awards: {
+    title: "Prêmios & Conquistas",
+    subtitle: "Reconhecimentos e participações em eventos que marcaram minha jornada profissional",
+    awards: "Prêmios & Reconhecimentos",
+    events: "Eventos & Conferências",
+    certifications: "Certificações Profissionais",
   },
 
   // Footer

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Menu, X, Home, User, Briefcase, Folder, Mail } from "lucide-react";
+import { Menu, X, Home, User, Briefcase, Folder, Mail, Trophy } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useLanguage } from "@/context/LanguageContext";
 import logo from "@/assets/logo.png";
@@ -37,6 +37,7 @@ const Navigation = () => {
     { label: t.nav.about, path: "/about", icon: User, action: () => handleNavigation("/about") },
     { label: t.nav.experience, path: "/experience", icon: Briefcase, action: () => handleNavigation("/experience") },
     { label: t.nav.portfolio, path: "/portfolio", icon: Folder, action: () => handleNavigation("/portfolio") },
+    { label: t.nav.awards, path: "/awards", icon: Trophy, action: () => handleNavigation("/awards") },
   ];
 
   return (
