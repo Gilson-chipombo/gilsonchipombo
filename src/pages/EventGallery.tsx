@@ -97,6 +97,7 @@ const eventGalleryData: EventData[] = [
 export default function EventGallery() {
   const { id } = useParams();
   const navigate = useNavigate();
+  const { t } = useLanguage();
   const event = eventGalleryData.find(e => e.id === parseInt(id || "0"));
 
   if (!event) {
@@ -108,13 +109,13 @@ export default function EventGallery() {
         
         <div className="flex-1 flex items-center justify-center px-6">
           <div className="text-center">
-            <h1 className="text-3xl font-bold mb-4">Evento não encontrado</h1>
+            <h1 className="text-3xl font-bold mb-4">{t.awards.eventNotFound}</h1>
             <button
               onClick={() => navigate("/awards")}
               className="inline-flex items-center gap-2 px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
-              Voltar para Prêmios
+              {t.awards.backToAwards}
             </button>
           </div>
         </div>
@@ -139,7 +140,7 @@ export default function EventGallery() {
             className="flex items-center gap-2 text-red-600 hover:text-red-700 mb-8 transition-colors font-semibold"
           >
             <ArrowLeft className="w-5 h-5" />
-            Voltar para Prêmios
+            {t.awards.backToAwards}
           </motion.button>
 
           {/* Event Header */}
@@ -201,7 +202,7 @@ export default function EventGallery() {
             className="mt-12 text-center text-muted-foreground"
           >
             <p className="text-lg font-semibold">
-              {event.photos.length} {event.photos.length === 1 ? "Foto" : "Fotos"} do Evento
+              {event.photos.length} {t.awards.photos}
             </p>
           </motion.div>
 
@@ -213,10 +214,10 @@ export default function EventGallery() {
             className="mt-16 p-8 border border-dashed border-red-600/30 rounded-xl text-center"
           >
             <p className="text-muted-foreground mb-4">
-              Quer adicionar mais fotos deste evento?
+              {t.awards.wantToAdd}
             </p>
             <button className="px-6 py-3 bg-gradient-to-r from-red-600 to-red-700 text-white rounded-lg hover:shadow-lg hover:shadow-red-600/50 transition-all font-semibold">
-              + Enviar Fotos
+              + {t.awards.addPhotos}
             </button>
           </motion.div>
         </div>

@@ -68,17 +68,17 @@ const AwardsSection = () => {
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="h-px w-8 bg-gradient-to-r from-transparent to-red-600" />
             <Trophy className="w-6 h-6 text-red-600" />
-            <span className="text-sm font-mono font-bold text-red-600">AWARDS & ACHIEVEMENTS</span>
+            <span className="text-sm font-mono font-bold text-red-600">{t.awards.title}</span>
             <Trophy className="w-6 h-6 text-red-600" />
             <div className="h-px w-8 bg-gradient-to-l from-transparent to-red-600" />
           </div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Prêmios & <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-500">Conquistas</span>
+            {t.awards.heading}
           </h2>
           
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Reconhecimentos e participações em eventos que marcaram minha jornada profissional.
+            {t.awards.subtitle}
           </p>
         </motion.div>
 
@@ -173,19 +173,19 @@ const AwardsSection = () => {
           <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-black/5 to-black/10 border border-black/20">
             <Trophy className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
             <div className="text-4xl font-bold mb-2">3+</div>
-            <p className="text-muted-foreground">Prêmios & Reconhecimentos</p>
+            <p className="text-muted-foreground">{t.awards.stats?.awards || "Prêmios & Reconhecimentos"}</p>
           </div>
 
           <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-black/5 to-black/10 border border-black/20">
             <Award className="w-12 h-12 text-gray-500 mx-auto mb-4" />
             <div className="text-4xl font-bold mb-2">6+</div>
-            <p className="text-muted-foreground">Eventos & Conferências</p>
+            <p className="text-muted-foreground">{t.awards.stats?.events || "Eventos & Conferências"}</p>
           </div>
 
           <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-black/5 to-black/10 border border-black/20">
             <Star className="w-12 h-12 text-orange-600 mx-auto mb-4" />
             <div className="text-4xl font-bold mb-2">2+</div>
-            <p className="text-muted-foreground">Certificações Profissionais</p>
+            <p className="text-muted-foreground">{t.awards.stats?.certifications || "Certificações Profissionais"}</p>
           </div>
         </motion.div>
       </div>

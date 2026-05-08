@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Brain, Code, Award, Target } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 const skills = [
   { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
@@ -15,51 +16,6 @@ const skills = [
   { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
   { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
   { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-];
-
-const softSkills = [
-  "Comunicação efetiva",
-  "Trabalho em equipe",
-  "Resolução de problemas",
-  "Pensamento crítico",
-  "Adaptabilidade",
-  "Gestão de tempo",
-  "Liderança",
-  "Criatividade",
-  "Empatia",
-  "Proatividade",
-];
-
-const hardSkills = [
-  "JavaScript / TypeScript",
-  "React / Next.js",
-  "PHP / Laravel",
-  "Node.js / Nest",
-  "PostgreSQL / MySQL",
-  "Java / Spring Boot",
-  "Docker",
-  "Git / GitHub",
-  "REST APIs",
-  "Testes automatizados",
-  "Linux / Shell Script",
-];
-
-const education = [
-  {
-    period: "Atual",
-    title: "42 Luanda",
-    description: "Formação intensiva em programação",
-  },
-  {
-    period: "2022 - Atual",
-    title: "Engenharia Informática",
-    description: "4º Ano - Ensino Superior",
-  },
-  {
-    period: "2018 - 2022",
-    title: "Instituto de Telecomunicações (ITEL)",
-    description: "Informática - Ensino Médio",
-  },
 ];
 
 interface SkillsModalProps {
@@ -126,6 +82,7 @@ const SkillsModal = ({ isOpen, onClose, title, skills, icon }: SkillsModalProps)
 };
 
 const AboutSection = () => {
+  const { t } = useLanguage();
   const [showSoftSkills, setShowSoftSkills] = useState(false);
   const [showHardSkills, setShowHardSkills] = useState(false);
 
@@ -134,15 +91,15 @@ const AboutSection = () => {
       <SkillsModal
         isOpen={showSoftSkills}
         onClose={() => setShowSoftSkills(false)}
-        title="Soft Skills"
-        skills={softSkills}
+        title={t.about.softSkillsBtn}
+        skills={t.about.softSkillsData}
         icon={<Brain size={28} />}
       />
       <SkillsModal
         isOpen={showHardSkills}
         onClose={() => setShowHardSkills(false)}
-        title="Hard Skills"
-        skills={hardSkills}
+        title={t.about.hardSkillsBtn}
+        skills={t.about.hardSkillsData}
         icon={<Code size={28} />}
       />
 
@@ -248,7 +205,7 @@ const AboutSection = () => {
           {/* Technologies Grid */}
           <div>
             <h4 className="text-sm font-mono text-primary mb-6 tracking-wide uppercase">
-              Tecnologias que uso:
+              {t.about.technologies}:
             </h4>
             <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
               {skills.map((skill, index) => (
@@ -282,9 +239,9 @@ const AboutSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-bold mb-8">Formação Acadêmica</h3>
+          <h3 className="text-2xl font-bold mb-8">{t.about.education}</h3>
           <div className="grid md:grid-cols-3 gap-6">
-            {education.map((item, index) => (
+            {t.about.educationData.map((item, index) => (
               <motion.div
                 key={item.title}
                 initial={{ opacity: 0, y: 20 }}

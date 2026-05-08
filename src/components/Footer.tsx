@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, MapPin, Phone, ExternalLink } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
@@ -23,15 +25,15 @@ const Footer = () => {
   ];
 
   const quickLinks = [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Experience", href: "/experience" },
-    { label: "Portfólio", href: "/portfolio" },
+    { label: t.nav.home, href: "/" },
+    { label: t.nav.about, href: "/about" },
+    { label: t.nav.experience, href: "/experience" },
+    { label: t.nav.portfolio, href: "/portfolio" },
   ];
 
   const contactInfo = [
-    { icon: MapPin, text: "Angola" },
-    { icon: Mail, text: "fernandochipombo@email.com" },
+    { icon: MapPin, text: t.footer.contactInfo },
+    { icon: Mail, text: t.footer.email },
   ];
 
   return (
@@ -52,7 +54,7 @@ const Footer = () => {
           >
             <h3 className="text-lg font-bold text-white mb-4">Gilson Chipombo</h3>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Desenvolvedor Full Stack com +4 experiência com desenvolvimento web e Integrações com Inteligência Artificial.
+              {t.footer.footerDescription}
             </p>
             <div className="pt-2 space-y-2">
               {contactInfo.map((info, index) => {
@@ -75,7 +77,7 @@ const Footer = () => {
             viewport={{ once: true }}
             className="space-y-4"
           >
-            <h3 className="text-lg font-bold text-white mb-4">Navegação</h3>
+            <h3 className="text-lg font-bold text-white mb-4">{t.footer.navigation}</h3>
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <motion.li
@@ -103,7 +105,7 @@ const Footer = () => {
             viewport={{ once: true }}
             className="space-y-4"
           >
-            <h3 className="text-lg font-bold text-white mb-4">Conecte-se</h3>
+            <h3 className="text-lg font-bold text-white mb-4">{t.footer.connect}</h3>
             <div className="flex gap-4">
               {socialLinks.map((social, index) => {
                 const Icon = social.icon;
@@ -124,7 +126,7 @@ const Footer = () => {
               })}
             </div>
             <p className="text-xs text-gray-500 mt-6">
-              Vamos criar algo incrível juntos!
+              {t.footer.message}
             </p>
           </motion.div>
         </div>
@@ -141,7 +143,7 @@ const Footer = () => {
           className="flex flex-col md:flex-row items-center justify-between gap-4"
         >
           <p className="text-xs text-gray-500 font-mono">
-            © {currentYear} Gilson Chipombo. Todos os direitos reservados.
+            © {currentYear} Gilson Chipombo. {t.footer.copyright}
           </p>
           <div className="flex items-center gap-2 text-xs text-gray-500">
             <span></span>

@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Figma, Youtube, MapPin } from "lucide-react";
 import coverImage from "@/assets/foto_de_capa.png";
+import { useLanguage } from "@/context/LanguageContext";
 
 const HeroSection = () => {
+  const { t } = useLanguage();
   return (
     <section className="min-h-screen flex items-center justify-between relative px-8 md:px-16 lg:px-20 py-12 pt-20 md:pt-12">
       {/* Left side */}
@@ -15,16 +17,16 @@ const HeroSection = () => {
           className="mb-20 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12"
         >
           <div>
-            <h3 className="text-xl md:text-2xl font-bold mb-3">FULL STACK DEVELOPER</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-3">{t.hero.fullStackDeveloper}</h3>
             <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-              Building end-to-end solutions with React, TypeScript, and modern backend technologies. I craft seamless experiences from database to user interface.
+              {t.hero.fullStackDesc}
             </p>
           </div>
 
           <div>
-            <h3 className="text-xl md:text-2xl font-bold mb-3">AI ENTHUSIAST</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-3">{t.hero.aiEnthusiast}</h3>
             <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-              Exploring the frontier of artificial intelligence and machine learning. Integrating cutting-edge AI solutions into practical applications.
+              {t.hero.aiDesc}
             </p>
           </div>
         </motion.div>
@@ -38,7 +40,7 @@ const HeroSection = () => {
         >
           <div className="flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
             <MapPin className="w-5 h-5 text-red-600" />
-            <span className="text-sm font-mono font-semibold">Located in Angola</span>
+            <span className="text-sm font-mono font-semibold">{t.hero.location}</span>
           </div>
 
           {/* Social Links */}

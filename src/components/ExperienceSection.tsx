@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Briefcase, Calendar, MapPin, ArrowRight } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 const experiences = [
   {
@@ -73,6 +74,7 @@ const experiences = [
 ];
 
 const ExperienceSection = () => {
+  const { t } = useLanguage();
   return (
     <section id="experience" className="min-h-screen py-24 px-6 md:px-16 lg:px-20 bg-gradient-to-b from-background via-background/50 to-background">
       <div className="max-w-6xl mx-auto">
@@ -86,13 +88,13 @@ const ExperienceSection = () => {
         >
           <div className="flex items-center gap-4 mb-8">
             <span className="text-sm font-mono text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-500">
-              03. EXPERIÊNCIA PROFISSIONAL
+              {t.experience.title}
             </span>
             <div className="h-px flex-1 bg-gradient-to-r from-orange-400/30 to-transparent" />
           </div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-            Minha Jornada <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-500">Profissional</span>
+            {t.experience.subtitle}
           </h2>
         </motion.div>
 
@@ -128,12 +130,17 @@ const ExperienceSection = () => {
                     </div>
                     {exp.type === "full-time" && (
                       <span className="px-3 py-1 bg-black text-white rounded-full text-xs font-mono font-bold">
-                        Full-time
+                        {t.experience.fullTime}
                       </span>
                     )}
                     {exp.type === "internship" && (
                       <span className="px-3 py-1 bg-black/20 text-black rounded-full text-xs font-mono font-bold">
-                        Internship
+                        {t.experience.internship}
+                      </span>
+                    )}
+                    {exp.type === "freelance" && (
+                      <span className="px-3 py-1 bg-orange-500/20 text-orange-600 rounded-full text-xs font-mono font-bold">
+                        {t.experience.freelance}
                       </span>
                     )}
                   </div>
@@ -157,7 +164,7 @@ const ExperienceSection = () => {
 
                   {/* Responsibilities */}
                   <div className="mb-6">
-                    <h4 className="font-bold mb-3 text-sm tracking-wide uppercase">Responsabilidades:</h4>
+                    <h4 className="font-bold mb-3 text-sm tracking-wide uppercase">{t.experience.responsibilities}:</h4>
                     <ul className="space-y-2">
                       {exp.responsibilities.map((responsibility, idx) => (
                         <li key={idx} className="flex items-start gap-3 text-sm text-muted-foreground">
@@ -170,7 +177,7 @@ const ExperienceSection = () => {
 
                   {/* Skills */}
                   <div>
-                    <h4 className="font-bold mb-3 text-sm tracking-wide uppercase">Skills:</h4>
+                    <h4 className="font-bold mb-3 text-sm tracking-wide uppercase">{t.experience.skills}:</h4>
                     <div className="flex flex-wrap gap-2">
                       {exp.skills.map((skill, idx) => (
                         <motion.span
@@ -197,9 +204,9 @@ const ExperienceSection = () => {
           viewport={{ once: true }}
           className="mt-20 p-8 md:p-12 rounded-2xl bg-gradient-to-r from-black/5 to-black/10 border border-black/20"
         >
-          <h3 className="text-2xl font-bold mb-4">Experiência Total</h3>
+          <h3 className="text-2xl font-bold mb-4">{t.experience.totalExperience}</h3>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Com mais de 4 anos de experiência em desenvolvimento de software, adquiri conhecimentos sólidos em full-stack development, arquitetura de sistemas e metodologias ágeis. Trabalhei em diversos projetos, desde startups até empresas estabelecidas, sempre focando em qualidade, performance e experiência do usuário.
+            {t.experience.totalExperienceDesc}
           </p>
         </motion.div>
       </div>
