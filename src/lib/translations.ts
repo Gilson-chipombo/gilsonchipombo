@@ -15,7 +15,7 @@ export const en = {
     developer: "DEVELOPER",
     webDesign: "WEB DESIGN",
     fullStackDeveloper: "FULL STACK DEVELOPER",
-    aiEnthusiast: "AI ENTHUSIAST",
+    aiEnthusiast: "SOFTWARE ENGINEER",
     fullStackDesc:
       "With 4+ years of experience with web development and AI Integration solutions. Applying DDD, SOLID principles and Clean Architecture for long-term maintainability.",
     aiDesc:
