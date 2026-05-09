@@ -17,7 +17,7 @@ export const en = {
     fullStackDeveloper: "FULL STACK DEVELOPER",
     aiEnthusiast: "AI ENTHUSIAST",
     fullStackDesc:
-      "Building end-to-end solutions with React, TypeScript, and modern backend technologies. I craft seamless experiences from database to user interface.",
+      "With 4+ years of experience with web development and AI Integration solutions. Applying DDD, SOLID principles and Clean Architecture for long-term maintainability.",
     aiDesc:
       "Exploring the frontier of artificial intelligence and machine learning. Integrating cutting-edge AI solutions into practical applications.",
     description:
@@ -28,7 +28,7 @@ export const en = {
   // About Section
   about: {
     title: "ABOUT ME",
-    bio: "I'm a full-stack developer with experience in building web applications using modern technologies. I love turning ideas into reality through code.",
+    bio: "With more than 4 years of experience in software development, I have acquired solid knowledge in full-stack development, system architecture and agile methodologies. I worked on various projects, from startups to established companies, always focusing on quality, performance and user experience.",
     skills: "Soft Skills & Hard Skills",
     softSkillsBtn: "Soft Skills",
     hardSkillsBtn: "Hard Skills",
@@ -90,7 +90,7 @@ export const en = {
     responsibilities: "Responsibilities",
     skills: "Skills",
     totalExperience: "Total Experience",
-    totalExperienceDesc: "With more than 4 years of experience in software development, I have acquired solid knowledge in full-stack development, system architecture and agile methodologies. I worked on various projects, from startups to established companies, always focusing on quality, performance and user experience.",
+    totalExperienceDesc: "With more +4 years of experience in software development, I have acquired solid knowledge in full-stack development, system architecture and agile methodologies. I worked on various projects, from startups to established companies, always focusing on quality, performance and user experience.",
   },
 
   // Portfolio Section
