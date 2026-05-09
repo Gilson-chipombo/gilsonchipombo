@@ -11,14 +11,16 @@ const experiences = [
     period: "2026 — Atual",
     description: "Desenvolvimento e manutenção de sistema SaaS multi-tenant para automação de atendimento e gestão de leads. Responsável pela arquitetura backend e integração com serviços terceiros.",
     responsibilities: [
-      "Desenvolvimento de APIs REST escaláveis com Node.js, NestJS e PostgreSQL",
+      "Desenvolvimento de APIs com NestJS e PostgreSQL aplicando DDD, princípios de SOLID e Clean Architecture",
+      "Coordenar a equipe de desenvolvimento",
+      "Deploy com CI/CD e github Actions",
       "Integração com APIs externas (WhatsApp Cloud API, serviços de IA)",
       "Processamento assíncrono com filas (BullMQ + Redis)",
       "Modelagem e otimização de banco de dados relacional",
       "Consumo de webhooks e processamento de eventos",
-      "Correção de bugs e melhorias contínuas em produção"
+      "Correção de bugs e melhorias contínuas em produção",
     ],
-    skills: ["Node.js", "NestJS", "PostgreSQL", "Gemini AI", "Redis", "BullMQ", "WhatsApp API", "TypeScript"],
+    skills: ["Node.js", "NestJS", "Docker","PostgreSQL", "Gemini AI", "Redis", "BullMQ", "WhatsApp API", "TypeScript"],
     type: "full-time"
   },
   {
@@ -35,7 +37,7 @@ const experiences = [
       "Resolução de problemas técnicos em aplicações e infraestrutura",
       "Desenvolvimento de funcionalidades frontend e backend"
     ],
-    skills: ["React", "Node.js", "Express", "PostgreSQL", "MongoDB", "TypeScript", "Tailwind CSS"],
+    skills: ["React", "Node.js", "Docker", "Express", "PostgreSQL", "MongoDB", "TypeScript", "Tailwind CSS"],
     type: "freelance"
   },
   {
