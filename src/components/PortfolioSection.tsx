@@ -49,7 +49,7 @@ const projects = [
   {
     id: 3,
     title: "42 Route API",
-    description: "Aplicação de gerenciamento de tarefas com colaboração em tempo real, comentários e sistema de notificações.",
+    description: "Aplicação de gerenciamento do transporte escolar da 42 Luanda que permite o monitoramento emem tempo real do transporte.",
     image: route,
     category: "Full-Stack",
     technologies: ["Vue.js", "Firebase", "Vuetify", "JavaScript", "PWA"],
