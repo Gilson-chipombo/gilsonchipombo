@@ -5,14 +5,14 @@ import { useLanguage } from "@/context/LanguageContext";
 import NASA from "@/assets/NASA.png"
 
 const awards = [
-  {
+   {
     id: 1,
-    title: "Participation in Hackathon NASA SPACE APPS",
-    organization: "Hackathon",
-    date: "Março 2025",
+    title: "🏆 Third Place — ICPC Angolan Collegiate Programming Contest 2025",
+    organization: "AOCPC - Programming Contest 2025",
+    date: "Setembro 2025",
     location: "Luanda, Angola",
-    description: "Participating in the NASA Space Apps Challenge 2025 was a transformative experience! Working as a team to solve real-world challenges proposed by NASA reinforced the importance of collaboration, creativity, and scientific thinking.",
-    image: NASA,
+    description: "Conquistamos o 3º lugar no ICPC Angolan Collegiate Programming Contest 2025, representando a Universidade de Luanda – INSTIC. Foram dois dias intensos de raciocínio lógico, trabalho em equipe e superação. Orgulho em fazer parte deste time incrível!",
+    image: "event3.jpg",
     category: "Award",
     type: "gold"
   },
@@ -29,15 +29,16 @@ const awards = [
   },
   {
     id: 3,
-    title: "🏆 Third Place — ICPC Angolan Collegiate Programming Contest 2025",
-    organization: "AOCPC - Programming Contest 2025",
-    date: "Setembro 2025",
+    title: "Participation in Hackathon NASA SPACE APPS",
+    organization: "Hackathon",
+    date: "Março 2025",
     location: "Luanda, Angola",
-    description: "Conquistamos o 3º lugar no ICPC Angolan Collegiate Programming Contest 2025, representando a Universidade de Luanda – INSTIC. Foram dois dias intensos de raciocínio lógico, trabalho em equipe e superação. Orgulho em fazer parte deste time incrível!",
-    image: "event3.jpg",
+    description: "Participating in the NASA Space Apps Challenge 2025 was a transformative experience! Working as a team to solve real-world challenges proposed by NASA reinforced the importance of collaboration, creativity, and scientific thinking.",
+    image: NASA,
     category: "Award",
     type: "gold"
   },
+  
   {
     id: 4,
     title: "Participation in Hackathon 42 Luanda",
