@@ -83,7 +83,7 @@ const projects = [
   },
   {
     id: 5,
-    title: "Task Management App",
+    title: "42 Route API",
     description: "Aplicação de gerenciamento de tarefas com colaboração em tempo real, comentários e sistema de notificações.",
     image: route,
     category: "Full-Stack",

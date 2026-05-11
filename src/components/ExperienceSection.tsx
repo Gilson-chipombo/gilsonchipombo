@@ -11,14 +11,14 @@ const experiences = [
     period: "2026 — Atual",
     description: "Desenvolvimento e manutenção de sistema SaaS multi-tenant para automação de atendimento e gestão de leads. Responsável pela arquitetura backend e integração com serviços terceiros.",
     responsibilities: [
-      "Desenvolvimento de APIs com NestJS e PostgreSQL aplicando DDD, princípios de SOLID e Clean Architecture",
-      "Coordenar a equipe de desenvolvimento",
+      "Desenvolvi APIs com NestJS e PostgreSQL aplicando DDD, princípios de SOLID e Clean Architecture",
+      "Coordenei a equipe de desenvolvimento",
       "Deploy com CI/CD e github Actions",
-      "Integração com APIs externas (WhatsApp Cloud API, serviços de IA)",
+      "Integrei com APIs externas (WhatsApp Cloud API, serviços de IA)",
       "Processamento assíncrono com filas (BullMQ + Redis)",
-      "Modelagem e otimização de banco de dados relacional",
-      "Consumo de webhooks e processamento de eventos",
-      "Correção de bugs e melhorias contínuas em produção",
+      "Modelei e otimização de banco de dados relacional",
+      "Consumi de webhooks e processamento de eventos",
+      "Corrigi bugs e e propus melhorias contínuas em produção",
     ],
     skills: ["Node.js", "NestJS", "Docker","PostgreSQL", "Gemini AI", "Redis", "BullMQ", "WhatsApp API", "TypeScript"],
     type: "full-time"
@@ -31,11 +31,11 @@ const experiences = [
     period: "2023 — 2025",
     description: "Desenvolvimento de sistemas personalizados para clientes. Atuação completa em stack full-stack com foco em soluções escaláveis.",
     responsibilities: [
-      "Desenvolvimento de sistemas personalizados para clientes",
-      "Criação de APIs REST e integração com bancos de dados",
-      "Implementação de sistemas de gestão (salários, controle e monitoramento)",
-      "Resolução de problemas técnicos em aplicações e infraestrutura",
-      "Desenvolvimento de funcionalidades frontend e backend"
+      "Desenvolvi de sistemas personalizados para clientes",
+      "Criei APIs REST e integração com bancos de dados",
+      "Implementei de sistemas de gestão (salários, controle e monitoramento)",
+      "Resolvi problemas técnicos em aplicações e infraestrutura",
+      "Desenvolvi funcionalidades frontend e backend"
     ],
     skills: ["React", "Node.js", "Docker", "Express", "PostgreSQL", "MongoDB", "TypeScript", "Tailwind CSS"],
     type: "freelance"
@@ -48,11 +48,11 @@ const experiences = [
     period: "2022",
     description: "Primeiro contato com desenvolvimento profissional. Participação em projetos com supervisão técnica e aprendizado de boas práticas.",
     responsibilities: [
-      "Apoio no desenvolvimento de sistemas web",
-      "Participação em projetos com supervisão técnica",
+      "Apoiei no desenvolvimento de sistemas web",
+      "Participei em projetos com supervisão técnica",
       "Aprendizado de boas práticas de programação",
-      "Correção de bugs e manutenção de sistemas",
-      "Colaboração com equipe técnica"
+      "Corrigi bugs e manutenção de sistemas",
+      "Colaborei com equipe técnica"
     ],
     skills: ["HTML/CSS", "JavaScript", "PHP", "MySQL", "Git"],
     type: "internship"
@@ -65,10 +65,10 @@ const experiences = [
     period: "2020 — 2021",
     description: "Primeira experiência profissional atuando como desenvolvedor junior em ambiente corporativo.",
     responsibilities: [
-      "Desenvolvimento de funcionalidades frontend e backend",
-      "Correção de bugs e manutenção de sistemas",
-      "Colaboração com equipe técnica",
-      "Documentação de código e processos"
+      "Desenvolvi funcionalidades frontend e backend",
+      "Corrigi bugs e manutenção de sistemas",
+      "Colaborei com equipe técnica",
+      "Documentei código e processos"
     ],
     skills: ["JavaScript", "HTML/CSS", "Bootstrap", "PHP", "MySQL"],
     type: "full-time"
