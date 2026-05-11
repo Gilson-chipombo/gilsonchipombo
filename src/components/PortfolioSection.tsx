@@ -11,10 +11,27 @@ import route from "@/assets/route.png";
 import ussd from "@/assets/ussd.jpg";
 
 const projects = [
+
   {
     id: 1,
+    title: "WhatsApp Bot + Gemini IA",
+    description: "Desenvolvimento de sistema SaaS para atendimento automatizado via WhatsApp",
+    image: wabot,
+    category: "Back-End",
+    technologies: ["WhatsApp API", "Gemini API", "NestJS", "Prisma"],
+    features: [
+      "Integração com WhatsApp Cloud API (envio, recebimento e processamento de webhooks)",
+      "Integração com IA (Gemini) para geração automática de respostas",
+      "Persistência de histórico de conversas utilizando PostgreSQL e Prisma ORM",
+    ],
+    link: "#",
+    github: "https://github.com/Gilson-chipombo/Whatsapp-Bot-Integrado-Com-Gemini-API",
+    status: "Completo"
+  },
+  {
+    id: 2,
     title: "Arrende Aqui",
-    description: "Plataforma que visa facilitar o processo de arrendamento de casas. Os pro",
+    description: "Plataforma que visa facilitar o processo de arrendamento de casas. Os proprietários publiquem as casas e os inqulinos conseguem ver quas as casas disponivéis",
     image: arrendaaqui,
     category: "Full-Stack",
     technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Redux"],
@@ -30,7 +47,25 @@ const projects = [
     status: "Completo"
   },
   {
-    id: 2,
+    id: 3,
+    title: "42 Route API",
+    description: "Aplicação de gerenciamento de tarefas com colaboração em tempo real, comentários e sistema de notificações.",
+    image: route,
+    category: "Full-Stack",
+    technologies: ["Vue.js", "Firebase", "Vuetify", "JavaScript", "PWA"],
+    features: [
+      "Colaboração em tempo real",
+      "Comentários em tarefas",
+      "Atribuição de responsáveis",
+      "PWA offline",
+      "Sincronização automática"
+    ],
+    link: "https://four2routeapi.onrender.com/api/docs",
+    github: "https://github.com/Gilson-chipombo/42RouteAPI-42Luanda",
+    status: "Completo"
+  },
+  {
+    id: 4,
     title: "API REST Escalável",
     description: "API REST robusta e escalável com arquitetura de microsserviços, documentação completa e testes de cobertura alta.",
     image: api,
@@ -48,24 +83,8 @@ const projects = [
     status: "Completo"
   },
   {
-    id: 3,
-    title: "WhatsApp Bot + Gemini IA",
-    description: "Desenvolvimento de sistema SaaS para atendimento automatizado via WhatsApp",
-    image: wabot,
-    category: "Back-End",
-    technologies: ["WhatsApp API", "Gemini API", "NestJS", "Prisma"],
-    features: [
-      "Integração com WhatsApp Cloud API (envio, recebimento e processamento de webhooks)",
-      "Integração com IA (Gemini) para geração automática de respostas",
-      "Persistência de histórico de conversas utilizando PostgreSQL e Prisma ORM",
-    ],
-    link: "#",
-    github: "https://github.com/Gilson-chipombo/Whatsapp-Bot-Integrado-Com-Gemini-API",
-    status: "Completo"
-  },
-  {
-    id: 4,
-    title: "Chat Application",
+    id: 5,
+    title: "E-Commerce",
     description: "Aplicação de chat em tempo real com suporte a múltiplas salas, notificações push e sincronização de mensagens.",
     image: shopeyetu,
     category: "Full-Stack",
@@ -77,27 +96,9 @@ const projects = [
       "Histórico de mensagens",
       "Autenticação social"
     ],
-    link: "#",
-    github: "#",
+    link: "https://shope-yetu.vercel.app/",
+    github: "https://github.com/Gilson-chipombo/shopeYetu",
     status: "Em desenvolvimento"
-  },
-  {
-    id: 5,
-    title: "42 Route API",
-    description: "Aplicação de gerenciamento de tarefas com colaboração em tempo real, comentários e sistema de notificações.",
-    image: route,
-    category: "Full-Stack",
-    technologies: ["Vue.js", "Firebase", "Vuetify", "JavaScript", "PWA"],
-    features: [
-      "Colaboração em tempo real",
-      "Comentários em tarefas",
-      "Atribuição de responsáveis",
-      "PWA offline",
-      "Sincronização automática"
-    ],
-    link: "https://four2routeapi.onrender.com/api/docs",
-    github: "https://github.com/Gilson-chipombo/42RouteAPI-42Luanda",
-    status: "Completo"
   },
   {
     id: 6,
