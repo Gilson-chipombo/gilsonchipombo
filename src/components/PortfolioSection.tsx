@@ -26,7 +26,7 @@ const projects = [
       "Notificações em tempo real"
     ],
     link: "https://arrenda-aqui.vercel.app/",
-    github: "#",
+    github: "https://github.com/Gilson-chipombo/ArrendeAqui",
     status: "Completo"
   },
   {
