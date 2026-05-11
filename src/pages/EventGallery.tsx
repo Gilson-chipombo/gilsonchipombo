@@ -29,14 +29,16 @@ interface EventData {
 const eventGalleryData: EventData[] = [
   {
     id: 1,
-    title: "Participation in Hackathon NASA SPACE APPS",
-    organization: "Hackathon",
-    date: "Março 2025",
+    title: "🏆 Third Place — ICPC Angolan Collegiate Programming Contest 2025",
+    organization: "AOCPC - Programming Contest 2025",
+    date: "Setembro 2025",
     location: "Luanda, Angola",
-    description: "Participating in the NASA Space Apps Challenge 2025 was a transformative experience! Working as a team to solve real-world challenges proposed by NASA reinforced the importance of collaboration, creativity, and scientific thinking.",
+    description: "Conquistamos o 3º lugar no ICPC Angolan Collegiate Programming Contest 2025, representando a Universidade de Luanda – INSTIC. Foram dois dias intensos de raciocínio lógico, trabalho em equipe e superação. Orgulho em fazer parte deste time incrível!",
     category: "Award",
     photos: [
-      `${NASA}`
+      `${AOCPC}`,
+      `${AOCPC2}`,
+      `${AOCPC3}`,
     ]
   },
   {
@@ -53,20 +55,19 @@ const eventGalleryData: EventData[] = [
       `${STEM3}`,
     ]
   },
-  {
+   {
     id: 3,
-    title: "🏆 Third Place — ICPC Angolan Collegiate Programming Contest 2025",
-    organization: "AOCPC - Programming Contest 2025",
-    date: "Setembro 2025",
+    title: "Participation in Hackathon NASA SPACE APPS",
+    organization: "Hackathon",
+    date: "Março 2025",
     location: "Luanda, Angola",
-    description: "Conquistamos o 3º lugar no ICPC Angolan Collegiate Programming Contest 2025, representando a Universidade de Luanda – INSTIC. Foram dois dias intensos de raciocínio lógico, trabalho em equipe e superação. Orgulho em fazer parte deste time incrível!",
+    description: "Participating in the NASA Space Apps Challenge 2025 was a transformative experience! Working as a team to solve real-world challenges proposed by NASA reinforced the importance of collaboration, creativity, and scientific thinking.",
     category: "Award",
     photos: [
-      `${AOCPC}`,
-      `${AOCPC2}`,
-      `${AOCPC3}`,
+      `${NASA}`
     ]
   },
+  
   {
     id: 4,
     title: "Speaker - Frontend Meetup",
