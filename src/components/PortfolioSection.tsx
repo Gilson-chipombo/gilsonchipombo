@@ -13,8 +13,8 @@ import ussd from "@/assets/ussd.jpg";
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "Plataforma completa de e-commerce com sistema de pagamentos integrado, gerenciamento de inventário e dashboard administrativo.",
+    title: "Arrende Aqui",
+    description: "Plataforma que visa facilitar o processo de arrendamento de casas. Os pro",
     image: arrendaaqui,
     category: "Full-Stack",
     technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Redux"],
@@ -25,7 +25,7 @@ const projects = [
       "Painel administrativo",
       "Notificações em tempo real"
     ],
-    link: "#",
+    link: "https://arrenda-aqui.vercel.app/",
     github: "#",
     status: "Completo"
   },
@@ -60,7 +60,7 @@ const projects = [
       "Persistência de histórico de conversas utilizando PostgreSQL e Prisma ORM",
     ],
     link: "#",
-    github: "#",
+    github: "https://github.com/Gilson-chipombo/Whatsapp-Bot-Integrado-Com-Gemini-API",
     status: "Completo"
   },
   {
@@ -95,14 +95,14 @@ const projects = [
       "PWA offline",
       "Sincronização automática"
     ],
-    link: "#",
-    github: "#",
+    link: "https://four2routeapi.onrender.com/api/docs",
+    github: "https://github.com/Gilson-chipombo/42RouteAPI-42Luanda",
     status: "Completo"
   },
   {
     id: 6,
-    title: "Weather App",
-    description: "Aplicação de previsão do tempo com integração de API externa, geolocalização e previsão estendida.",
+    title: "USSD Simulation",
+    description: "Aplicação que simula USSD com integração com o Twillio e African Talks.",
     image: ussd,
     category: "Frontend",
     technologies: ["React", "OpenWeather API", "Axios", "Tailwind CSS", "Geolocation"],
