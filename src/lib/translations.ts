@@ -16,6 +16,7 @@ export const en = {
     webDesign: "WEB DESIGN",
     fullStackDeveloper: "FULL STACK DEVELOPER",
     aiEnthusiast: "SOFTWARE ENGINEER",
+    viewExperience: "View Experience",
     fullStackDesc:
       "With 4+ years of experience with web development and AI Integration solutions. Applying DDD, SOLID principles and Clean Architecture for long-term maintainability.",
     aiDesc:
@@ -163,6 +164,7 @@ export const pt = {
     webDesign: "DESIGN WEB",
     fullStackDeveloper: "DESENVOLVEDOR FULL STACK",
     aiEnthusiast: "ENTUSIASTA DE IA",
+    viewExperience: "Ver Experiência",
     fullStackDesc:
       "Construindo soluções end-to-end com React, TypeScript e tecnologias modernas de backend. Crio experiências perfeitas do banco de dados até a interface do usuário.",
     aiDesc:

@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Figma, Youtube, MapPin } from "lucide-react";
+import { Github, Linkedin, Figma, Youtube, MapPin, ArrowRight } from "lucide-react";
 import coverImage from "@/assets/foto_de_capa.png";
 import { useLanguage } from "@/context/LanguageContext";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
   return (
     <section className="min-h-screen flex items-center justify-between relative px-8 md:px-16 lg:px-20 py-12 pt-20 md:pt-12">
       {/* Left side */}
@@ -64,6 +66,17 @@ const HeroSection = () => {
               <Github className="w-6 h-6" />
             </motion.a>
           </div>
+
+          {/* View Experience Button */}
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => navigate("/experience")}
+            className="flex items-center gap-2 px-6 py-3 rounded-lg bg-black text-white font-semibold hover:bg-gray-900 transition-colors mt-4"
+          >
+            {t.hero.viewExperience}
+            <ArrowRight className="w-5 h-5" />
+          </motion.button>
         </motion.div>
       </div>
 
