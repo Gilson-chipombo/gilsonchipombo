@@ -135,13 +135,13 @@ const Navigation = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5 }}
-                onClick={() => scrollToSection("contact")}
+                onClick={() => handleNavigation("/portfolio")}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-6 py-2 bg-black text-white rounded-full font-medium text-sm shadow-lg hover:bg-neutral-900 transition-all duration-300 whitespace-nowrap flex items-center gap-2"
               >
-                <Mail size={18} />
-                {t.nav.contact}
+                <Folder size={18} />
+                {t.nav.portfolio}
               </motion.button>
 
               {/* Mobile Menu Button */}
@@ -189,11 +189,11 @@ const Navigation = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 }}
-                onClick={() => scrollToSection("contact")}
+                onClick={() => handleNavigation("/portfolio")}
                 className="w-full mt-4 px-4 py-2 bg-black text-white rounded-full font-medium text-sm hover:bg-neutral-900 transition-all duration-300 flex items-center justify-center gap-2"
               >
-                <Mail size={18} />
-                Contactos
+                <Folder size={18} />
+                {t.nav.portfolio}
               </motion.button>
             </motion.div>
           )}
