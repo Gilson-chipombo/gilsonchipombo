@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Figma, Youtube, MapPin, ArrowRight } from "lucide-react";
+import { Github, Linkedin, Figma, Youtube, MapPin, Rocket } from "lucide-react";
 import coverImage from "@/assets/foto_de_capa.png";
 import { useLanguage } from "@/context/LanguageContext";
 import { useNavigate } from "react-router-dom";
@@ -34,6 +34,7 @@ const HeroSection = () => {
         </motion.div>
 
         {/* Center section with location and social links */}
+        
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -47,6 +48,33 @@ const HeroSection = () => {
 
           {/* Social Links */}
           <div className="flex flex-col gap-6">
+
+            {/* View Experience Button */}
+            <motion.button
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(0, 0, 0, 0.3)" }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => navigate("/experience")}
+              className="flex items-center gap-2 px-6 py-3 rounded-lg bg-black text-white font-semibold hover:bg-gray-900 transition-colors mt-4 relative overflow-hidden group"
+            >
+              <span className="relative z-10">{t.hero.viewExperience}</span>
+              <motion.div
+                animate={{ y: [-5, -15, -5] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              >
+                <Rocket className="w-5 h-5" />
+              </motion.div>
+              {/* Shine effect on hover */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20"
+                initial={{ x: "-100%" }}
+                whileHover={{ x: "100%" }}
+                transition={{ duration: 0.6 }}
+              />
+            </motion.button>
+            
             <motion.a
               whileHover={{ scale: 1.15 }}
               href="https://www.linkedin.com/in/gilson-bravo-fernando-chipombo-aa0ba4209/"
@@ -67,16 +95,6 @@ const HeroSection = () => {
             </motion.a>
           </div>
 
-          {/* View Experience Button */}
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => navigate("/experience")}
-            className="flex items-center gap-2 px-6 py-3 rounded-lg bg-black text-white font-semibold hover:bg-gray-900 transition-colors mt-4"
-          >
-            {t.hero.viewExperience}
-            <ArrowRight className="w-5 h-5" />
-          </motion.button>
         </motion.div>
       </div>
 
